@@ -16,11 +16,19 @@
 }
 
 .border-left{
-    border-left: 3px dashed white;
+    border-left: 2px dashed white;
 }
 
 
 .border-bottom{
     border-bottom: 1px dashed white;
+}
+
+.border-bottom-black{
+    border-bottom: 1px dashed #03071299;
+}
+
+.border-left-green{
+    border-left: 2px dashed #1DD100;
 }
 
