@@ -128,7 +128,7 @@
                         <div
                             class="w-[180px] h-[56px] flex justify-evenly items-center bg-[#1DD10026] rounded-xl border border-[#1DD100]">
                             <img src="images/seat-green.png" alt="...">
-                            <p class="text-[#1DD100] text-lg font-medium inter">40 Seats left</p>
+                            <p class="text-[#1DD100] text-lg font-medium inter"><span id="totalSeatAvailable">8</span> Seats left</p>
                         </div>
                     </div>
 
@@ -196,20 +196,21 @@
                         </div>
 
                         <!-- Seat Numbers -->
-                        <div class="w-[570px] flex justify-between items-center gap-24 pl-6">
+                        <div class="w-[570px] flex justify-between items-center gap-24 pl-6 seatSelectionCount">
                             <div id="leftSideSeats" class="grid grid-cols-2 gap-8">
-                                <p id="a1Select" class="w-[110px] h-[56px] flex justify-center items-center rounded-xl"><button>A1</button></p>
-                                <p id="a2Select" class="w-[110px] h-[56px] flex justify-center items-center rounded-xl"><button>A2</button></p>
-                                <p id="b1Select" class="w-[110px] h-[56px] flex justify-center items-center rounded-xl"><button>B1</button></p>
-                                <p id="b2Select" class="w-[110px] h-[56px] flex justify-center items-center rounded-xl"><button>B2</button></p>
+                                <p id="a1Select" class="w-[110px] h-[56px] flex justify-center items-center rounded-xl btnSelect"><button>A1</button></p>
+                                <p id="a2Select" class="w-[110px] h-[56px] flex justify-center items-center rounded-xl btnSelect"><button>A2</button></p>
+                                <p id="b1Select" class="w-[110px] h-[56px] flex justify-center items-center rounded-xl btnSelect"><button>B1</button></p>
+                                <p id="b2Select" class="w-[110px] h-[56px] flex justify-center items-center rounded-xl btnSelect"><button>B2</button></p>
                             </div>
-                            <div class="grid grid-cols-2 gap-8">
-                                <p id="a3Select" class="w-[110px] h-[56px] flex justify-center items-center rounded-xl"><button>A3</button></p>
-                                <p id="a4Select" class="w-[110px] h-[56px] flex justify-center items-center rounded-xl"><button>A4</button></p>
-                                <p id="b3Select" class="w-[110px] h-[56px] flex justify-center items-center rounded-xl"><button>B3</button></p>
-                                <p id="b4Select" class="w-[110px] h-[56px] flex justify-center items-center rounded-xl"><button>B4</button></p>
+                            <div id="rightSideSeats" class="grid grid-cols-2 gap-8">
+                                <p id="a3Select" class="w-[110px] h-[56px] flex justify-center items-center rounded-xl btnSelect"><button>A3</button></p>
+                                <p id="a4Select" class="w-[110px] h-[56px] flex justify-center items-center rounded-xl btnSelect"><button>A4</button></p>
+                                <p id="b3Select" class="w-[110px] h-[56px] flex justify-center items-center rounded-xl btnSelect"><button >B3</button></p>
+                                <p id="b4Select" class="w-[110px] h-[56px] flex justify-center items-center rounded-xl btnSelect"><button>B4</button></p>
                             </div>
                         </div>
+                        
                     </div>
 
                 </div>
@@ -220,34 +221,34 @@
 
                     <div
                         class="inter font-semibold text-base flex justify-between items-center border-bottom-gray pb-5 border-top-gray pt-5">
-                        <p>Seat <span class="bg-[#1DD100] py-1 px-3 rounded-xl ml-2 text-white">0</span></p>
+                        <p>Seat <span id="seatOnCart" class="bg-[#1DD100] py-1 px-3 rounded-xl ml-2 text-white">0</span></p>
                         <p>Class</p>
                         <p>Price</p>
                     </div>
 
-                    <div
-                        class="inter font-semibold text-base pt-5 flex justify-between items-center border-bottom-gray pb-5 text-[#03071299]">
-                        <p>C2</p>
-                        <p>Economoy</p>
-                        <p>550</p>
+
+                    <div class="inter font-semibold text-base pt-5 border-bottom-gray pb-5 text-[#03071299]">
+                        <ul id="cartList" >
+
+                        </ul>
                     </div>
 
                     <div
                         class="inter font-semibold text-base flex justify-between items-center border-bottom-gray pb-5 border-top-gray pt-5">
                         <p>Total Price</p>
-                        <p>BDT <span>1000</span></p>
+                        <p>BDT <span id="totalPrice">0</span></p>
                     </div>
 
-                    <div class="pt-5 flex justify-between items-center">
-                        <input type="text" placeholder="Have any copupon?"
+                    <div id="CouponBox" class="pt-5 flex justify-between items-center">
+                        <input id="inputCoupon" type="text" placeholder="Have any coupon?"
                             class="h-[45px] w-[330px] pl-5 border border-[#1DD100] rounded-lg">
-                        <button
+                        <button id="enterD" disabled
                             class="btn w-[80px] h-[20px] bg-[#1DD100] text-white text-base font-semibold border-[#1DD100]">Apply</button>
                     </div>
 
                     <div class="inter font-semibold text-base flex justify-between items-center pb-5 pt-5">
                         <p>Grand Price</p>
-                        <p>BDT <span>1000</span></p>
+                        <p>BDT <span id="grandPrice">0</span></p>
                     </div>
 
                     <button
@@ -259,6 +260,8 @@
                     </div>
                 </div>
 
+            </div>
+            <div id="seatMain">
             </div>
         </section>
 
