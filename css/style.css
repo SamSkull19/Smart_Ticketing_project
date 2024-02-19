@@ -19,9 +19,25 @@
     border-left: 2px dashed white;
 }
 
+.border-right-gray{
+    border-right: 2px dashed rgb(171, 171, 171);
+}
+
 
 .border-bottom{
     border-bottom: 1px dashed white;
+}
+
+.border-bottom-solid{
+    border-bottom: 1px solid gray;
+}
+
+.border-bottom-gray{
+    border-bottom: 1px dashed rgb(171, 171, 171);
+}
+
+.border-top-gray{
+    border-top: 1px dashed rgb(171, 171, 171);
 }
 
 .border-bottom-black{
