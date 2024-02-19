@@ -94,7 +94,7 @@ enterFinal.addEventListener('click', function () {
     couponBox.style.visibility= 'hidden';
 })
 
-console.log(totalPrice);
+
 
 function totalPriceCost(id, price) {
     let totalCost = document.getElementById(id).innerText;
@@ -135,6 +135,18 @@ function totalGrandPriceCostCoupon(category) {
 function setInnerText(id, value) {
     document.getElementById(id).innerText = value;
 }
+
+
+
+const nextPageBTN = document.getElementById('nextPageBTN');
+nextPageBTN.addEventListener('click', function () {
+    const mainPage = document.getElementById('MainPage');
+    mainPage.classList.add('hidden');
+
+    const successPage = document.getElementById('successPage');
+    successPage.classList.remove('hidden');
+
+})
 
 
 
